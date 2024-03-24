@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { SlLocationPin } from "react-icons/sl";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Job = ({ job }) => {
 
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
+    const { logo, id, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
 
 
     return (
@@ -29,7 +30,9 @@ const Job = ({ job }) => {
                     </h2>
                 </div>
                 <div className="card-actions">
-                    <button className="btn hover:opacity-80 bg-gradient-to-r from-indigo-400 to-indigo-500 text-white">View Details</button>
+                    <Link to={`/job/${id}`}>
+                        <button className="btn hover:opacity-80 bg-gradient-to-r from-indigo-400 to-indigo-500 text-white">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
