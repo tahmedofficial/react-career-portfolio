@@ -1,24 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import PropTypes from 'prop-types';
 import Job from "../Job/Job";
 
-const FeaturedJobs = () => {
+const FeaturedJobs = ({jobs}) => {
 
-    const [jobs, setJobs] = useState([]);
     const [dataLength, setDataLength] = useState(4);
-
-    useEffect(() => {
-        fetch('jobs.json')
-            .then(res => res.json())
-            .then(data => setJobs(data))
-    }, [])
-
-
 
     return (
         <div>
-            <div className="text-center">
-                <h2 className="text-5xl">Featured Jobs {jobs.length}</h2>
-                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <div className="text-center mt-24 mb-10">
+                <h2 className="text-5xl font-semibold">Featured Jobs {jobs.length}</h2>
+                <p className="text-gray-500 mt-5">Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
             <div className="grid md:grid-cols-2 gap-6 mb-16">
                 {
@@ -31,5 +23,9 @@ const FeaturedJobs = () => {
         </div>
     );
 };
+
+FeaturedJobs.propTypes={
+    jobs: PropTypes.array.isRequired
+}
 
 export default FeaturedJobs;
