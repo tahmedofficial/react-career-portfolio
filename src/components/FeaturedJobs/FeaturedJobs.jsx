@@ -7,7 +7,7 @@ const FeaturedJobs = ({jobs}) => {
     const [dataLength, setDataLength] = useState(4);
 
     return (
-        <div>
+        <div className="md:w-5/6 mx-auto">
             <div className="text-center mt-24 mb-10">
                 <h2 className="text-5xl font-semibold">Featured Jobs {jobs.length}</h2>
                 <p className="text-gray-500 mt-5">Explore thousands of job opportunities with all the information you need. Its your future</p>

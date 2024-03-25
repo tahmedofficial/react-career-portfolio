@@ -1,14 +1,14 @@
-import accounts from "../../assets/images/accounts.png"
-import creative from "../../assets/images/creative.png"
-import marketing from "../../assets/images/marketing.png"
-import engineering from "../../assets/images/chip.png"
+import accounts from "../../assets/images/accounts.png";
+import creative from "../../assets/images/creative.png";
+import marketing from "../../assets/images/marketing.png";
+import engineering from "../../assets/images/chip.png";
 
 
 const CategoryList = () => {
 
 
     return (
-        <div>
+        <div className="md:w-5/6 mx-auto">
             <div className="text-center mt-24 mb-10">
                 <h2 className="text-5xl font-semibold">Job Category List</h2>
                 <p className="text-gray-500 mt-5">Explore thousands of job opportunities with all the information you need. Its your future</p>
