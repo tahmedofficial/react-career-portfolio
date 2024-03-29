@@ -8,6 +8,7 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 import { saveJobApplication } from "../../utility/localStorage";
 import bg from "../../assets/images/bg1.png";
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
 
@@ -27,7 +28,9 @@ const JobDetails = () => {
 
     return (
         <div>
-
+            <Helmet>
+                <title>Job Details</title>
+            </Helmet>
             <div className="bg-indigo-50 pt-14 md:relative md:h-72 md:flex">
                 <div className="md:absolute">
                     <img src={bg} alt="" />

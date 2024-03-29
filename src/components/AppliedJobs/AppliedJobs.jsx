@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../../utility/localStorage";
 import bg from "../../assets/images/bg1.png";
 import AppliedJobDetails from "../AppliedJobDetails/AppliedJobDetails";
+import { Helmet } from "react-helmet-async";
 
 
 const AppliedJobs = () => {
@@ -46,6 +47,9 @@ const AppliedJobs = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Applied Jobs</title>
+            </Helmet>
             <div className="bg-indigo-50 pt-14 md:relative md:h-72 md:flex">
                 <div className="md:absolute">
                     <img src={bg} alt="" />
